@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+<html lang="en">
+  <head>
+    <!-- Define Charset -->
+    <meta charset="utf-8" />
+
+    <!-- Page Title -->
+    <title>SUC-FEIT</title>
+    <!-- <title>Learn Responsive Landing Page</title> -->
+
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="Landing Page" />
+    <meta name="author" content="Coralix Themes" />
+
+    <!-- fontello -->
+    <!--[if IE 7
+      ]><link
+        href="css/fonts/fontello-ie7.css"
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+    /><![endif]-->
+
+    <style>
+      .fixHeight {
+        height: 14.27cm;
+      }
+      section,
+      .container {
+        overflow-x: hidden;
+      }
+    </style>
+    <!--  -->
+    <script src="build/ouibounce.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css"> -->
+
+    <!-- external dependencies -->
+    <!--  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+  </head>
+  <body>
+    <!-- <header>
+      <h1>Ouibounce</h1>
+      <h2>Increase your landing page conversion rates</h2>
+    </header>
+
+    <div class="container">
+      <p>Ouibounce enables you to display a modal before a user leaves your website, helping you increase your landing page conversion rates. From experience, you can expect a 7% to 15% conversion rate increase - depending on your audience, traffic quality and offer.</p>
+
+      <h2>A powerful library</h2>
+      <p>Ouibounce is incredibly easy to install and it comes with powerful features, helping you control every aspect of the user experience. Visit the GitHup repo to learn more!</p>
+
+      <a href="https://github.com/carlsednaoui/ouibounce" class="button">View Ouibounce on GitHub</a>
+
+      <h2>Interactive demo</h2>
+      <p>To see how Ouibounce works, simply try to close this tab.</p>
+    </div> -->
+
+    <!-- Ouibounce Modal -->
+    <!-- <div id="ouibounce-modals">
+        <iframe width="100%" height="759" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/2db8C8eUP7l9Auf1ya"><a href="https://www.emailmeform.com/builder/embed/2db8C8eUP7l9Auf1ya">Fill out form.</a></iframe>
+<div style="margin-top:18px;text-align:center"><div id='emf_advertisement'><font face="Verdana" size="2" color="#000000">Powered by</font><span style="position: relative; padding-left: 3px; bottom: -5px;"><img src="//assets.emailmeform.com/images/footer-logo.png?bWFzdGVy" /></span><font face="Verdana" size="2" color="#000000">EMF </font><a style="text-decoration:none;" href="https://www.emailmeform.com/" target="_blank"><font face="Verdana" size="2" color="#000000">Contact Form</font></a></div></div>
+    </div> -->
+
+    <div id="ouibounce-modals">
+      <div class="underlay"></div>
+      <div class="modal">
+        <div class="modal-title">
+          <h3>Get More Info?</h3>
+        </div>
+
+        <div class="modal-body">
+          <p>Thanks for stoping by!</p>
+          <br />
+          <p>
+            Subcribe and get more infornmation about Southern University College
+            and courses provided.
+          </p>
+          <!-- <p>You can style your Ouibounce modal however you see fit. You can also include big buttons, an email capture or just plain text. The sky's the limit!</p>
+          <br>
+          <p>Close this modal by clicking "No Thanks" below or clicking anywhere outside of the modal.</p> -->
+
+          <form>
+            <input type="text" placeholder="you@email.com" />
+            <input type="submit" value="learn more &raquo;" />
+            <!-- <p class="form-notice">*this is a fake form</p> -->
+            <p class="form-notice">*We can contact you soon</p>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <p>no thanks</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example page JS        -->
+    <!-- Used to fire the modal -->
+    <script>
+      // if you want to use the 'fire' or 'disable' fn,
+      // you need to save OuiBounce to an object
+      var _ouibounce = ouibounce(document.getElementById("ouibounce-modals"), {
+        aggressive: true,
+        timer: 0,
+        callback: function () {
+          console.log("ouibounce fired!");
+        },
+      });
+
+      $("body").on("click", function () {
+        $("#ouibounce-modals").hide();
+      });
+
+      $("#ouibounce-modals .modal-footer").on("click", function () {
+        $("#ouibounce-modals").hide();
+      });
+
+      $("#ouibounce-modals .modal").on("click", function (e) {
+        e.stopPropagation();
+      });
+    </script>
+    <!-- ======================= JQuery libs =============================== -->
+    <script>
+      $(document).ready(function () {
+        $(".nav-tabs a").click(function () {
+          $(this).tab("show");
+        });
+      });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap-->
+    <script src="js/bootstrap.js"></script>
+
+    <!--[if lt IE 8]><script src="js/respond.min.js"></script><![endif]-->
+
+    <!-- fancyBox -->
+    <script
+      type="text/javascript"
+      src="js/fancy/jquery.fancybox.pack.js"
+    ></script>
+
+    <!-- fit videos -->
+    <script src="js/jquery.fitvids.min.js" type="text/javascript"></script>
+
+    <!-- team -->
+    <script src="js/owl-carousel/owl.carousel.js"></script>
+
+    <!-- preload  -->
+    <script src="js/pace.min.js"></script>
+
+    <!-- easing -->
+    <script src="js/easing.js" type="text/javascript"></script>
+
+    <!-- Custom js-->
+    <script src="js/jquery-func.js"></script>
+    <!-- ======================= End JQuery libs =========================== -->
+
+    <!-- Example page JS        -->
+    <!-- Used to fire the modal -->
+    <script>
+      // if you want to use the 'fire' or 'disable' fn,
+      // you need to save OuiBounce to an object
+      var _ouibounce = ouibounce(document.getElementById("ouibounce-modals"), {
+        aggressive: true,
+        timer: 0,
+        callback: function () {
+          console.log("ouibounce fired!");
+        },
+      });
+
+      $("body").on("click", function () {
+        $("#ouibounce-modals").hide();
+      });
+
+      $("#ouibounce-modals .modal-footer").on("click", function () {
+        $("#ouibounce-modals").hide();
+      });
+
+      $("#ouibounce-modals .modal").on("click", function (e) {
+        e.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
