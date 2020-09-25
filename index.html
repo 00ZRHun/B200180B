@@ -22,17 +22,17 @@
     
   <!-- fontello -->   
     <!--[if IE 7 ]><link href="css/fonts/fontello-ie7.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
-  <link href="css/fonts/fontello.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/fonts/fontello.css" rel="stylesheet" type="text/css" media="screen" />
 
-  <!-- owl-carousel -->   
-  <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" media="screen" />		    
-  <!-- Custom style -->	    	    
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="css/media-queries.css" rel="stylesheet" type="text/css" media="screen" />
-
-  <!-- Preload -->   
-  <link href="css/pace/pace-theme-barber-shop.css" rel="stylesheet" type="text/css" media="screen" />	
-
+    <!-- owl-carousel -->   
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" media="screen" />		    
+    <!-- Custom style -->	    	    
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/media-queries.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <!-- Preload -->   
+    <link href="css/pace/pace-theme-barber-shop.css" rel="stylesheet" type="text/css" media="screen" />	
+    
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 
     <!-- Fav and touch icons -->
@@ -40,11 +40,19 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.html">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.html">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
-  <link rel="shortcut icon" href="assets/ico/favicon.html">
-  
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon" />
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!--Google Translate-->
+      <!-- MAIN STYLESHEET -->
+      <link defer href="catalog/view/theme/aio/stylesheet/aio0567.css?ver=1601012331" rel="stylesheet" type="text/css" />
+    
+      <!-- MATERIAL DESIGN ICON -->
+      <link defer rel="stylesheet" href="catalog/view/theme/aio/stylesheet/materialdesignicons-3.3.92/materialdesignicons.min.css">
+    <!--End Google Translate-->
 
   <style>
     .fixHeight{
@@ -52,6 +60,7 @@
     }
     section, .container {
       overflow-x: hidden;
+      overflow-y: hidden;
     }
     .galleryImgSize{
       /* width: 212em;
@@ -59,6 +68,81 @@
       height: 21em;
       width: 100%;
     }
+
+    /* Google Translate */
+    #app-google-translate {
+      position: fixed;
+      top: 50%;
+      z-index: 11;
+      right: 20px;
+    }
+
+    #app-google-translate.rightSide {
+      left: auto;
+      right: 20px;
+    }
+
+    #app-google-translate .ui-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      width: 60px;
+      background-color: white;
+      border-radius: 50px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: all 0.3s;
+      padding-right: 10px;
+    }
+
+    #app-google-translate .ui-wrapper #google_translate_element {
+      margin: auto;
+    }
+
+    #app-google-translate .ui-wrapper #google_translate_element img {
+      display: none;
+    }
+
+    #app-google-translate .ui-wrapper #google_translate_element .goog-te-gadget-simple {
+      border: 0px;
+    }
+
+    #app-google-translate .ui-wrapper #google_translate_element span {
+      border: 0px !important;
+      color: #767676;
+    }
+
+    #app-google-translate .ui-wrapper #google_translate_element .goog-te-menu2 {
+      border: none !important;
+      border-radius: 0px 0px 10px 10px !important;
+    }
+
+    #app-google-translate .ui-wrapper #btn-gtranslate {
+      z-index: 1;
+    }
+
+    #app-google-translate .ui-wrapper #btn-gtranslate .icon-gtranslate {
+      transition: all 0.3s;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #387ef3;
+      background-color: #ffffff;
+    }
+
+    #app-google-translate.is-active .ui-wrapper {
+      width: 210px;
+    }
+
+    .goog-te-menu-frame {
+      box-shadow: none !important;
+    }
+    /* Google Translate */
   </style>
   <!--  -->
   <script src="build/ouibounce.min.js"></script>
@@ -75,6 +159,10 @@
   <!-- external dependencies -->
   <!--  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- ShareThis BEGIN -->
+  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f6dc13cf5b7170012b1288b&product=sticky-share-buttons" async="async"></script>
+  <!-- ShareThis END -->
 </head>
 <body id="top" style="overflow-x: hidden;">  	
  
@@ -101,20 +189,21 @@
             <span class="icon-bar"></span>
           </button>
           
+          <!--???-->
           <!-- <a id="logo" class="navbar-brand" href="index.html"><img src="img/logo.png" alt="My Brand" height="100%" style="margin-top: auto"></a> -->
-          <a id="logo" class="navbar-brand" href="index.html"><img src="img/logo.png" alt="My Brand" height="100%" style="margin: auto"></a>
+          <a id="logo" class="navbar-brand" href="index.html"><img src="img/logo.png" alt="My Brand" height="100%" width="auto" style="margin: auto"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse nb np">
           <ul class="nav navbar-nav">
             <li><a href="#top" class="anchor">Home</a></li>
-          <!-- <li><a href="#suscribe" class="anchor">Subscribe</a></li> -->
-          <li><a href="#gallery" class="anchor">Gallery</a></li>
-          <li><a href="#cool-things" class="anchor">Features</a></li>
-          <li><a href="#team" class="anchor">Team</a></li>
-          <li><a href="#videos" class="anchor">Video</a></li>
-          <li><a href="#pricing" class="anchor">Courses</a></li>
-          </ul>
+            <!-- <li><a href="#suscribe" class="anchor">Subscribe</a></li> -->
+            <li><a href="#gallery" class="anchor">Gallery</a></li>
+            <li><a href="#cool-things" class="anchor">Features</a></li>
+            <li><a href="#team" class="anchor">Team</a></li>
+            <li><a href="#videos" class="anchor">Video</a></li>
+            <li><a href="#pricing" class="anchor">Courses</a></li>
+          </ul>         
         </div><!-- /.navbar-collapse -->
       </nav>
     </div>
@@ -210,7 +299,7 @@
         </div>
         <!-- <h2>Register </h2> -->
         <!-- <h2>Contact Us</h2> -->
-        <div class="col-sm-7 from-right">
+        <div class="col-sm-7 from-right" style="overflow-y: hidden;">
           <iframe width="100%" height="615" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/2db8C8eUP7l9Auf1ya"><a href="https://www.emailmeform.com/builder/embed/2db8C8eUP7l9Auf1ya">Fill out form.</a></iframe>
           <div style="margin-top:18px;text-align:center; margin: 0; padding: 0; height: fit-content;"><div id='emf_advertisement'><font face="Verdana" size="2" color="#000000">Powered by</font><span style="position: relative; padding-left: 3px; bottom: -5px;"><img src="//assets.emailmeform.com/images/footer-logo.png?bWFzdGVy" /></span><font face="Verdana" size="2" color="#000000">EMF </font><a style="text-decoration:none;" href="https://www.emailmeform.com/" target="_blank"><font face="Verdana" size="2" color="#000000">Contact Form</font></a></div></div>
         </div>
@@ -1216,11 +1305,34 @@
         </div>
     </div>
     
-    <!--CTO Widget-->
+    <!--Google Translate-->
+    <div id="app-google-translate" class='rightSide visible-xs visible-sm visible-md visible-lg'>
+      <div class="ui-wrapper">
+        <div id="btn-gtranslate">
+          <i class="icon-gtranslate"></i>
+          <i class="fa fa-language" aria-hidden="true"></i>
+        </div>
+        <div id="google_translate_element"></div>  
+        <script defer type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              //pageLanguage: 'auto',
+              pageLanguage: 'en',
+              includedLanguages: 'en,ms,zh-CN,ko,vi,th',
+              autoDisplay: false,
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+          }
+        </script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </div>
+    </div>
+    <!--End Google Translate-->
+
+    <!--CTO Widget(WhatsApp, Facebook)-->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-f5e213c8-3740-41e6-a2c2-babceee73969"></div>
-    <!--End CTO Widget-->
-    
+    <!--End CTO Widget(WhatsApp, Facebook)--> 
   </section>
   <!-- End Courses Details -->
     
@@ -1333,7 +1445,7 @@
 		  <input type="text" placeholder="Year of Graduate" id="yog_text">
 		  <br>
 		  <input class="submit_btn" type="submit" value="Submit" style="margin-top: 10px;">
-		  <br>
+		  <br><br>
 		  <p class="form-notice" style="text-align: center;">*Please fill in with genuine information</p>
 		</form>
 	  </div>
@@ -1402,6 +1514,70 @@
   $('#ouibounce-modals .modal').on('click', function(e) {
     e.stopPropagation();
   });
+
+  // GOOGLE TRANSLATE UI
+  $('#btn-gtranslate').on('click', function() {
+      if($('#app-google-translate').hasClass('is-active')) {
+          $('#app-google-translate').removeClass('is-active');
+      } else {
+          $('#app-google-translate').addClass('is-active');
+      }
+  });
+  // END GOOGLE TRANSLATE UI
 </script>
 </body>
 </html>
+
+<style>
+	@media(min-width: 768px){
+		.social-share-bar{
+			display:block;
+			top:20%;
+			left:0;
+			position:fixed;
+			z-index:11 !important;
+			width:50px;
+			cursor:pointer;
+		}
+	}
+</style>
+<div class="social-share-bar">
+	<div style="position:relative;">
+		<meta property="og:url"                content="https%3A%2F%2Fwww.freshbao.com%2F"/>
+		<meta property="og:type"               content="website"/>
+		<meta property="og:title"              content="食品供应上鲜宝-Freshbao Food Supply"/>
+		<meta property="og:description"        content="Daily Need, Food &amp; Delivery Service"/>
+
+					<div id="fb-root"></div>
+			  <script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			  }(document, 'script', 'facebook-jssdk'));</script>
+
+			<!-- <div id="btn_fb" class="fb-share-button" 
+				data-href="https%3A%2F%2Fwww.freshbao.com%2F" 
+				data-layout="button">
+				<svg>
+					<path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path>
+				</svg>
+			</div> -->
+			
+			<script>
+				$('#btn_fb').on('click',function(){
+					var windowHeight = 400;
+					var windowWidth = 600;
+					var xPos = (screen.width/2) - (windowWidth/2);
+					var yPos = (screen.height/2) - (windowHeight/2);
+
+					var fbpopup = window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.freshbao.com%2F', "pop", 'width='+windowWidth+',height='+windowHeight+',left='+xPos+',top='+yPos+',scrollbars=no');
+				});
+			</script>
+		
+		
+			</div>
+</div>
+<!-- WITHOUT CACHE: 1.1198589801788 -->
+<!-- WITH CACHE: 0.0027978420257568 -->
